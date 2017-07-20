@@ -32,7 +32,7 @@ function setContent(){
             tr.appendChild(createTag('td', entry.category));
             tr.appendChild(createTag('td', entry.instructions));
             tr.appendChild(createTag('td', entry.handle, 'pad'));
-            tr.appendChild(createTag('td', '查看細目', 'button', {title:entry.category, msg:entry.cause, status:entry.category=='獎勵'?'success':'error'}));
+            tr.appendChild(createTag('td', '查看細目', 'button', {title:entry.category, msg:`批示日期:${entry.instructions}｜發生日期:${entry.occur}\r\n${entry.cause}\r\n${entry.category!='獎勵'?'銷過日期:'+entry.writeoff:''}`, status:entry.category=='獎勵'?'success':'error'}));
             //{title:entry.category, content:entry.cause, 'success'}
 
             switch(true){
@@ -40,31 +40,31 @@ function setContent(){
                     rp.count[rp.index]+=1;
                 break;
                 case (/貳|二|兩/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=2;
                 break;
                 case (/參|三/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=3;
                 break;
                 case (/肆|四/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=4;
                 break;
                 case (/伍|五/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=5;
                 break;
                 case (/陸|六/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=6;
                 break;
                 case (/柒|七/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=7;
                 break;
                 case (/捌|八/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=8;
                 break;
                 case (/玖|九/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=9;
                 break;
                 case (/拾|十/g).test(entry.handle):
-                    rp.count[rp.index]+=1;
+                    rp.count[rp.index]+=10;
                 break;
                 default:alert(`Error:無法辨識 ${entry.handle},請通知開發者`);
             }
