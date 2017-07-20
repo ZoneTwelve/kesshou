@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>獎懲記錄 - 木棉手札</title>
+<script src="request.rp.js"></script>
+<style>
+table {
+    width:100%;
+    border-collapse: collapse;
+}table, tr, td {
+    border: 1px solid black;
+    text-align: center;
+}
+#content{
+    display:none;
+}
+</style>
+</head>
+<body>
+<div id="load">載入資料中...</div>
+<div id="content">
+<table>
+    <tr class="center">
+        <td>大功</td>
+        <td>小功</td>
+        <td>嘉獎</td>
+        <td>警告</td>
+        <td>小過</td>
+        <td>大過</td>
+    </tr>
+    <tr class="pleft">
+        <td id="rp0">大功</td>
+        <td id="rp1">小功</td>
+        <td id="rp2">嘉獎</td>
+        <td id="rp3">警告</td>
+        <td id="rp4">小過</td>
+        <td id="rp5">大過</td>
+    </tr>
+</table>
+<hr />
+<table id="list">
+</table>
+</div>
+</body>
+</html>
