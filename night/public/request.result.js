@@ -7,7 +7,7 @@ window.onload = function(){
 
 function getAll(year){
 	xhttp.onreadystatechange = function() {
-		if(this.status==200){
+		if(this.status==200&&this.readyState==4){
 			all.push(JSON.parse(this.responseText))
 			if(year<3){
 				getAll(year+1);
